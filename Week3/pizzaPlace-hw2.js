@@ -29,7 +29,6 @@ function getPizzaOrder(size, crust, ...pizzaToppings) {
 }
 
 getPizzaOrder(10, "thick", "Mushrooms", "Vegan Sausage", "Vegan Peperoni", "Peppers", "Vegan Cheese");
-// console.log(getPizzaOrder(10, "thick", "Mushrooms", "Vegan Sausage", "Vegan Peperoni", "Peppers", "Vegan Cheese"));
 
 // Create a preparePizza function
 function preparePizza() {
@@ -39,19 +38,19 @@ function preparePizza() {
     toppings: ["Vegan Sausage", "Vegan Cheese", "Peppers"]
   };
   console.log(`Cooking one small ${pizza.size}, ${pizza.crust} crust pizza with ${pizza.toppings}...`)
+
+  return pizza
 }
 preparePizza()
 
 // Create a servePizza function
-function servePizza(size, crust, toppings) {
-  let servingPizza = `Order up! Here is your small ${size}, ${crust} crust pizza with `
-  for (let topping of toppings) {
+function servePizza(pizza) {
+  let servingPizza = `Order up! Here is your small ${pizza.size} ${pizza.crust} crust pizza with`
+  for (let topping of pizzaToppings) {
     servingPizza += topping
   };
   console.log(servingPizza);
-  return [size, crust]
+
+  return pizza
 };
-
-servePizza("10 inch", "thick", ["Vegan Sausage", "Vegan Cheese", "Peppers"]);
-
-
+servePizza(preparePizza())
