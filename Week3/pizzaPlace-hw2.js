@@ -46,7 +46,7 @@ preparePizza()
 // Create a servePizza function
 function servePizza(pizza) {
   let servingPizza = `Order up! Here is your small ${pizza.size} ${pizza.crust} crust pizza with`
-  for (let topping of pizzaToppings) {
+  for (let topping of pizza.toppings) {
     servingPizza += topping
   };
   console.log(servingPizza);
