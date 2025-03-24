@@ -1,3 +1,4 @@
+
 html {
   background-color: antiquewhite;
 }
@@ -13,33 +14,64 @@ h1 {
 
 img {
   height: 100%;
+  max-width: 50%;
+  margin: auto;
 }
 
 div {
   border: 2px solid burlywood;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 #introPic {
-  float: left;
+  float: none;
 }
 
 #about-me {
-  float: right;
+  /* float: right; */
 }
 
-#about-me>li {
+#about-me > li {
   padding: 2px;
+}
+
+ul {
+  padding: 0% 10%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  padding: 0% 10%;
 }
 
 #pro {
   width: auto;
 }
 
-@media (min-width: 375px) and (max-width: 667px){
+#top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 667px) {
   img {
     max-width: 100%;
-    height: auto;
+    margin: auto;
+  }
+
+  #aboutMe {
+    text-align: justify;
+    margin: auto;
   }
 }
+
+
+
+
 

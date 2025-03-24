@@ -306,5 +306,7 @@ const user3 = array.filter(todos => todos.userId === 3);
 console.log(user3);
 
 // then find the number of user 3's incomplete tasks
-const incomplete = array.filter(task => !task.completed);
+const incomplete = array
+.filter(task => task.userId === 3)
+.filter(task => !task.completed);
 console.log(incomplete);

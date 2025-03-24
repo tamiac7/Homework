@@ -235,8 +235,8 @@ let newArray = array.map(id => id.phone);
 console.log(newArray);
 
 // create and print a list of website and email pairs (pair them in a string, array, or object)
-let newString = [];
-array.forEach(user => newString.push(`${user.website}, ${user.email}`));
-console.log(newString);
+let newStringArray = [];
+array.forEach(user => newStringArray.push(`${user.website}, ${user.email}`));
+console.log(newStringArray);
 
 

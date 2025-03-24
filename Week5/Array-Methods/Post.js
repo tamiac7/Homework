@@ -1,3 +1,5 @@
+const { title } = require("process");
+
 const array = [
   {
     userID: 1,
@@ -306,6 +308,9 @@ const user5 = array.filter(post => post.userID === 5);
 console.log(user5);
 
 // then, create a list of title and body pairs
-let newString = [];
-array.forEach(user => newString.push(`${user.title}, ${user.body}`));
-console.log(newString);
+const pair = array.filter(list => list.userID === 5);
+let newPair = pair.map(list => ({
+  title: list.title,
+  body: list.body
+}));
+console.log(newPair);
